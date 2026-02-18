@@ -46,7 +46,7 @@ export const CampingSection = () => {
             {/* Image 2 */}
             <div className="relative rounded-2xl overflow-hidden shadow-xl group">
               <img
-                src="https://customer-assets.emergentagent.com/job_capayanes-camping/artifacts/oqzj8twq_Screenshot_2026-02-18-11-27-36-568_com.google.android.apps.maps.jpg"
+                src="https://customer-assets.emergentagent.com/job_capayanes-camping/artifacts/80lngbcc_Screenshot_2026-02-18-11-27-44-451_com.google.android.apps.maps.jpg"
                 alt="Cabaña en el camping"
                 className="w-full h-[350px] object-cover group-hover:scale-105 transition-transform duration-500"
               />

@@ -115,8 +115,8 @@ export const contact = {
 export const gallery = [
   {
     id: 1,
-    url: "https://customer-assets.emergentagent.com/job_capayanes-camping/artifacts/oqzj8twq_Screenshot_2026-02-18-11-27-36-568_com.google.android.apps.maps.jpg",
-    alt: "Exterior de la cabaña de troncos",
+    url: "https://customer-assets.emergentagent.com/job_capayanes-camping/artifacts/80lngbcc_Screenshot_2026-02-18-11-27-44-451_com.google.android.apps.maps.jpg",
+    alt: "Exterior de la cabaña de troncos rodeada de naturaleza",
     category: "cabaña"
   },
   {
