@@ -1,34 +1,115 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* Custom Styles for Los Capayanes Website */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+html {
+    scroll-behavior: smooth;
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
+body {
+    overflow-x: hidden;
+}
+
+/* Wood Texture Background Pattern */
+.wood-texture {
+    background-image: 
+        linear-gradient(90deg, rgba(120, 80, 50, 0.1) 1px, transparent 1px),
+        linear-gradient(rgba(120, 80, 50, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+/* Smooth transitions for interactive elements */
+button {
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Image loading optimization */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1c1917;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #d97706;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #b45309;
+}
+
+/* Selection color */
+::selection {
+    background-color: #d97706;
     color: white;
 }
 
-.App-link {
-    color: #61dafb;
+/* Focus visible for accessibility */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 3px solid #d97706;
+    outline-offset: 2px;
 }
 
-@keyframes App-logo-spin {
+/* Prevent layout shift */
+.container {
+    max-width: 1280px;
+}
+
+/* Animation utilities */
+@keyframes fadeIn {
     from {
-        transform: rotate(0deg);
+        opacity: 0;
+        transform: translateY(20px);
     }
     to {
-        transform: rotate(360deg);
+        opacity: 1;
+        transform: translateY(0);
     }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* Gradient text effect */
+.gradient-text {
+    background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Card hover effects */
+.card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
