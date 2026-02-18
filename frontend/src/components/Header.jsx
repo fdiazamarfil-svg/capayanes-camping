@@ -27,6 +27,7 @@ export const Header = () => {
     { label: 'Camping', id: 'camping' },
     { label: 'Actividades', id: 'activities' },
     { label: 'Galería', id: 'gallery' },
+    { label: 'Testimonios', id: 'testimonials' },
     { label: 'Precios', id: 'pricing' },
     { label: 'Contacto', id: 'contact' }
   ];
