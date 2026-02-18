@@ -46,14 +46,14 @@ export const CampingSection = () => {
             {/* Image 2 */}
             <div className="relative rounded-2xl overflow-hidden shadow-xl group">
               <img
-                src="https://images.unsplash.com/photo-1511884642898-4c92249e20b6"
-                alt="Vista aérea del camping"
+                src="https://customer-assets.emergentagent.com/job_capayanes-camping/artifacts/oqzj8twq_Screenshot_2026-02-18-11-27-36-568_com.google.android.apps.maps.jpg"
+                alt="Cabaña en el camping"
                 className="w-full h-[350px] object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent"></div>
               <div className="absolute bottom-6 left-6 text-white">
-                <h3 className="text-2xl font-bold">Naturaleza Pura</h3>
-                <p className="text-stone-200">Salida directa al monte</p>
+                <h3 className="text-2xl font-bold">Alojamiento Rústico</h3>
+                <p className="text-stone-200">Cabaña de troncos naturales</p>
               </div>
             </div>
           </div>

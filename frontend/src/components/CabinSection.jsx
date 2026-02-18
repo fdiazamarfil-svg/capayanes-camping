@@ -29,7 +29,7 @@ export const CabinSection = () => {
           <div className="relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1763743259620-d63b1aa32f2e"
+                src="https://customer-assets.emergentagent.com/job_capayanes-camping/artifacts/oqzj8twq_Screenshot_2026-02-18-11-27-36-568_com.google.android.apps.maps.jpg"
                 alt="Cabaña Los Capayanes"
                 className="w-full h-[500px] object-cover"
               />

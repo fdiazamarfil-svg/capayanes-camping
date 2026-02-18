@@ -115,9 +115,9 @@ export const contact = {
 export const gallery = [
   {
     id: 1,
-    url: "https://customer-assets.emergentagent.com/job_capayanes-camping/artifacts/97smdx6m_Screenshot_2026-02-18-11-27-17-007_com.google.android.apps.maps.jpg",
-    alt: "Entrada Reserva Los Capayanes",
-    category: "reserva"
+    url: "https://customer-assets.emergentagent.com/job_capayanes-camping/artifacts/oqzj8twq_Screenshot_2026-02-18-11-27-36-568_com.google.android.apps.maps.jpg",
+    alt: "Exterior de la cabaña de troncos",
+    category: "cabaña"
   },
   {
     id: 2,
@@ -127,43 +127,88 @@ export const gallery = [
   },
   {
     id: 3,
+    url: "https://customer-assets.emergentagent.com/job_capayanes-camping/artifacts/97smdx6m_Screenshot_2026-02-18-11-27-17-007_com.google.android.apps.maps.jpg",
+    alt: "Entrada Reserva Los Capayanes",
+    category: "reserva"
+  },
+  {
+    id: 4,
     url: "https://customer-assets.emergentagent.com/job_capayanes-camping/artifacts/ntq6pxir_Screenshot_2026-02-18-11-27-23-786_com.google.android.apps.maps.jpg",
     alt: "Actividades en la montaña",
     category: "actividades"
   },
   {
-    id: 4,
+    id: 5,
     url: "https://customer-assets.emergentagent.com/job_capayanes-camping/artifacts/nnqiqj7e_Screenshot_2026-02-18-11-27-28-478_com.google.android.apps.maps.jpg",
     alt: "Las Palmas Catamarca",
     category: "ubicacion"
   },
   {
-    id: 5,
+    id: 6,
     url: "https://customer-assets.emergentagent.com/job_capayanes-camping/artifacts/x6xmnb07_Screenshot_2026-02-18-11-27-31-702_com.google.android.apps.maps.jpg",
     alt: "Naturaleza y campo verde",
     category: "naturaleza"
-  },
-  {
-    id: 6,
-    url: "https://images.unsplash.com/photo-1763743259620-d63b1aa32f2e",
-    alt: "Cabaña rústica en el bosque",
-    category: "cabaña"
-  },
-  {
-    id: 7,
-    url: "https://images.unsplash.com/photo-1660433012125-0f2f948fff97",
-    alt: "Cabaña entre árboles",
-    category: "cabaña"
-  },
-  {
-    id: 8,
-    url: "https://images.pexels.com/photos/5644485/pexels-photo-5644485.jpeg",
-    alt: "Cabaña con luz natural",
-    category: "cabaña"
   }
 ];
 
 export const heroImages = {
-  main: "https://images.unsplash.com/photo-1511497584788-876760111969",
-  secondary: "https://images.unsplash.com/photo-1511884642898-4c92249e20b6"
+  main: "https://customer-assets.emergentagent.com/job_capayanes-camping/artifacts/97smdx6m_Screenshot_2026-02-18-11-27-17-007_com.google.android.apps.maps.jpg",
+  secondary: "https://customer-assets.emergentagent.com/job_capayanes-camping/artifacts/x6xmnb07_Screenshot_2026-02-18-11-27-31-702_com.google.android.apps.maps.jpg"
 };
+
+export const testimonials = [
+  {
+    id: 1,
+    name: "María González",
+    location: "Buenos Aires",
+    rating: 5,
+    date: "Noviembre 2025",
+    text: "Una experiencia increíble. La cabaña es tal cual las fotos, muy rústica y acogedora. El dueño es súper amable y nos guió por todos los senderos. La cascada petrificada es impresionante.",
+    avatar: "MG"
+  },
+  {
+    id: 2,
+    name: "Carlos Fernández",
+    location: "Córdoba",
+    rating: 5,
+    date: "Octubre 2025",
+    text: "Lugar ideal para desconectar. El camping tiene todo lo necesario y la naturaleza es espectacular. Las charlas sobre pueblos originarios nos fascinaron. Volveremos seguro.",
+    avatar: "CF"
+  },
+  {
+    id: 3,
+    name: "Laura y Diego",
+    location: "Rosario",
+    rating: 5,
+    date: "Septiembre 2025",
+    text: "Pasamos un fin de semana maravilloso. La cabaña es muy confortable, el hogar a leña mantiene todo cálido. Los paseos guiados son excelentes, aprendimos mucho sobre la flora nativa.",
+    avatar: "LD"
+  },
+  {
+    id: 4,
+    name: "Roberto Sánchez",
+    location: "Mendoza",
+    rating: 5,
+    date: "Agosto 2025",
+    text: "Hicimos la cabalgata por los senderos de montaña y fue una aventura única. El lugar transmite mucha paz y tranquilidad. La atención del dueño es excelente, muy servicial.",
+    avatar: "RS"
+  },
+  {
+    id: 5,
+    name: "Ana Martínez",
+    location: "Tucumán",
+    rating: 5,
+    date: "Julio 2025",
+    text: "La reserva es hermosa y Los Capayanes es el lugar perfecto para explorarla. La cabaña tiene todas las comodidades. El WiFi funciona bien, aunque fuimos para desconectar jaja.",
+    avatar: "AM"
+  },
+  {
+    id: 6,
+    name: "Familia Rodríguez",
+    location: "Salta",
+    rating: 5,
+    date: "Junio 2025",
+    text: "Vinimos con nuestros 3 hijos y fue perfecto. La cabaña tiene espacio para todos, los chicos disfrutaron muchísimo del camping y los paseos. Una experiencia educativa y divertida.",
+    avatar: "FR"
+  }
+];
