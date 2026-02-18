@@ -103,8 +103,8 @@ export const pricing = {
 export const contact = {
   address: "Capayán 1234, Las Palmas",
   city: "San Fernando del Valle de Catamarca",
-  phone: "+5490500433834",
-  whatsapp: "+5490500433834",
+  phone: "+5493834050043",
+  whatsapp: "+5493834050043",
   mapUrl: "https://maps.app.goo.gl/hrb6TPGDswDv9stH6",
   coordinates: {
     lat: -28.3447,
