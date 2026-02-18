@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mountain, Footprints, History, Crown, Building2, Horse, Waves, Palette, BookOpen } from 'lucide-react';
+import { Mountain, Footprints, History, Crown, Building2, Map, Waves, Palette, BookOpen } from 'lucide-react';
 import { activities } from '../data/mock';
 
 export const ActivitiesSection = () => {
@@ -9,7 +9,7 @@ export const ActivitiesSection = () => {
     history: <History className="w-6 h-6" />,
     peak: <Crown className="w-6 h-6" />,
     ruins: <Building2 className="w-6 h-6" />,
-    horse: <Horse className="w-6 h-6" />,
+    horse: <Map className="w-6 h-6" />,
     water: <Waves className="w-6 h-6" />,
     craft: <Palette className="w-6 h-6" />,
     culture: <BookOpen className="w-6 h-6" />
