@@ -5,6 +5,7 @@ import { CabinSection } from './components/CabinSection';
 import { CampingSection } from './components/CampingSection';
 import { ActivitiesSection } from './components/ActivitiesSection';
 import { GallerySection } from './components/GallerySection';
+import { TestimonialsSection } from './components/TestimonialsSection';
 import { PricingSection } from './components/PricingSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
@@ -21,6 +22,7 @@ function App() {
         <CampingSection />
         <ActivitiesSection />
         <GallerySection />
+        <TestimonialsSection />
         <PricingSection />
         <ContactSection />
       </main>
