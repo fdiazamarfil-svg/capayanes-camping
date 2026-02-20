@@ -1,14 +1,8 @@
 import React, { useState } from 'react';
-import { Send, User, Mail, Phone, MessageSquare, CheckCircle, AlertCircle } from 'lucide-react';
+import { Send, User, Mail, Phone, MessageSquare, CheckCircle } from 'lucide-react';
 import { contact } from '../data/mock';
 import { toast } from 'sonner';
 import axios from 'axios';
-
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const LOCAL_BACKEND = 'http://localhost:8001';
-
-// Detectar si estamos en localhost
-const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
 
 export const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -33,42 +27,59 @@ export const ContactSection = () => {
     setIsSubmitting(true);
 
     try {
-      // Usar backend local en desarrollo
-      const apiUrl = isLocalhost ? LOCAL_BACKEND : BACKEND_URL;
+      // SIEMPRE usar localhost:8001 para desarrollo
+      const API_URL = 'http://localhost:8001';
       
-      console.log('Enviando a:', `${apiUrl}/api/contact/`);
+      console.log('=== ENVIANDO FORMULARIO ===');
+      console.log('URL:', `${API_URL}/api/contact/`);
+      console.log('Data:', formData);
       
-      const response = await axios.post(`${apiUrl}/api/contact/`, formData, {
+      const response = await axios.post(`${API_URL}/api/contact/`, formData, {
         headers: {
           'Content-Type': 'application/json'
         },
-        timeout: 10000 // 10 segundos timeout
+        timeout: 10000
       });
+      
+      console.log('=== RESPUESTA EXITOSA ===');
+      console.log('Status:', response.status);
+      console.log('Data:', response.data);
       
       if (response.status === 201) {
         setIsSubmitted(true);
-        toast.success('¡Mensaje enviado con éxito! Te contactaremos pronto.');
+        toast.success('¡Mensaje enviado con éxito! Te contactaremos pronto.', {
+          duration: 4000
+        });
         
-        // Reset form after 3 seconds
+        // Reset form after 4 seconds
         setTimeout(() => {
           setFormData({ name: '', email: '', phone: '', message: '', service: 'cabaña' });
           setIsSubmitted(false);
-        }, 3000);
+        }, 4000);
       }
     } catch (error) {
-      console.error('Error al enviar consulta:', error);
-      console.error('Error details:', error.response?.data);
+      console.error('=== ERROR AL ENVIAR ===');
+      console.error('Error completo:', error);
+      console.error('Response:', error.response);
+      console.error('Request:', error.request);
       
-      // Mostrar mensaje más específico
+      let errorMessage = 'Error al enviar el mensaje. ';
+      
       if (error.code === 'ECONNABORTED') {
-        toast.error('Tiempo de espera agotado. Por favor, intenta de nuevo.');
+        errorMessage += 'Tiempo de espera agotado.';
       } else if (error.response) {
-        toast.error(`Error del servidor: ${error.response.status}. Por favor, contacta por WhatsApp.`);
+        errorMessage += `Error del servidor (${error.response.status}).`;
       } else if (error.request) {
-        toast.error('No se pudo conectar con el servidor. Por favor, contacta por WhatsApp.');
+        errorMessage += 'No se pudo conectar con el servidor.';
       } else {
-        toast.error('Error al enviar el mensaje. Por favor, intenta de nuevo o contacta por WhatsApp.');
+        errorMessage += error.message;
       }
+      
+      errorMessage += ' Por favor, contacta por WhatsApp.';
+      
+      toast.error(errorMessage, {
+        duration: 5000
+      });
     } finally {
       setIsSubmitting(false);
     }
