@@ -178,6 +178,30 @@ export const gallery = [
     url: "https://customer-assets.emergentagent.com/job_capayanes-camping/artifacts/9is2cs8o_WhatsApp%20Image%202026-02-17%20at%2021.18.11.jpeg",
     alt: "Vista panorámica de las montañas de Los Capayanes",
     category: "naturaleza"
+  },
+  {
+    id: 12,
+    url: "https://customer-assets.emergentagent.com/job_capayanes-camping/artifacts/51u3g58o_WhatsApp%20Image%202026-02-18%20at%2019.31.35.jpeg",
+    alt: "Interior de la cabaña con hogar a leña",
+    category: "cabaña"
+  },
+  {
+    id: 13,
+    url: "https://customer-assets.emergentagent.com/job_capayanes-camping/artifacts/nvftbokb_WhatsApp%20Image%202026-02-18%20at%2019.31.36%20%281%29.jpeg",
+    alt: "Horno de barro tradicional",
+    category: "actividades"
+  },
+  {
+    id: 14,
+    url: "https://customer-assets.emergentagent.com/job_capayanes-camping/artifacts/tr7cv4m8_WhatsApp%20Image%202026-02-18%20at%2019.31.37%20%281%29.jpeg",
+    alt: "Taller de artesanías con arcilla",
+    category: "actividades"
+  },
+  {
+    id: 15,
+    url: "https://customer-assets.emergentagent.com/job_capayanes-camping/artifacts/bp43axmw_WhatsApp%20Image%202026-02-18%20at%2019.31.37.jpeg",
+    alt: "Creación de artesanías tradicionales",
+    category: "actividades"
   }
 ];
 
