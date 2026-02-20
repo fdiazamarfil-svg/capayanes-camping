@@ -9,6 +9,7 @@ from pydantic import BaseModel, Field, ConfigDict
 from typing import List
 import uuid
 from datetime import datetime, timezone
+from routes.contact import router as contact_router
 
 
 ROOT_DIR = Path(__file__).parent
@@ -20,7 +21,11 @@ client = AsyncIOMotorClient(mongo_url)
 db = client[os.environ['DB_NAME']]
 
 # Create the main app without a prefix
-app = FastAPI()
+app = FastAPI(
+    title="Cabaña Los Capayanes API",
+    description="API para gestionar consultas y reservas de Los Capayanes",
+    version="1.0.0"
+)
 
 # Create a router with the /api prefix
 api_router = APIRouter(prefix="/api")
@@ -65,6 +70,9 @@ async def get_status_checks():
             check['timestamp'] = datetime.fromisoformat(check['timestamp'])
     
     return status_checks
+
+# Include contact router
+api_router.include_router(contact_router)
 
 # Include the router in the main app
 app.include_router(api_router)
