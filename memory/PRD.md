@@ -27,7 +27,27 @@ Construir una página web para promocionar el alquiler de una cabaña anexo camp
 8. Responsive design
 9. Smooth scroll navigation
 
-## What's Been Implemented (December 18, 2026)
+## What's Been Implemented (December 18, 2026 - Updated)
+
+### ✅ Backend Complete (NEW)
+1. **Contact API** (`/app/backend/routes/contact.py`)
+   - POST /api/contact/ - Crear nueva consulta
+   - GET /api/contact/ - Obtener todas las consultas
+   - GET /api/contact/{id} - Obtener consulta específica
+   - PATCH /api/contact/{id}/status - Actualizar estado
+   - Validación con Pydantic
+   - Estados: pending, contacted, resolved
+
+2. **MongoDB Integration**
+   - Collection: `contacts`
+   - Almacena: nombre, email, teléfono, servicio, mensaje, estado, fecha
+   - 8 consultas de prueba guardadas exitosamente
+
+3. **Contact Model** (`/app/backend/models/contact.py`)
+   - Validación de email con EmailStr
+   - Generación automática de UUID
+   - Timestamps automáticos
+   - Campo de estado para seguimiento
 
 ### ✅ Completed Components
 1. **Header Component** (`/app/frontend/src/components/Header.jsx`)
@@ -99,14 +119,14 @@ Construir una página web para promocionar el alquiler de una cabaña anexo camp
     - Redes sociales
     - Copyright
 
-11. **Mock Data** (`/app/frontend/src/data/mock.js`)
+11. **Mock Data** (`/app/frontend/src/data/mock.js`) ✅ UPDATED
     - Toda la información de la cabaña
     - Datos del camping
     - 9 actividades detalladas
     - Precios
-    - Información de contacto
-    - 6 URLs de galería (solo fotos reales)
-    - 6 testimonios de visitantes ⭐ NEW
+    - Información de contacto (incluyendo email: fdiazamarfil@gmail.com)
+    - 15 URLs de galería (solo fotos reales) ⭐ UPDATED
+    - 6 testimonios de visitantes
 
 ### 🎨 Design Features Implemented
 - Paleta de colores tierra: amber-600, stone-900, green-600
@@ -127,27 +147,35 @@ Construir una página web para promocionar el alquiler de una cabaña anexo camp
 - Success feedback
 
 ## Content Loaded
-- **Fotos del usuario**: 6 imágenes reales de Los Capayanes (100% fotos reales, NO AI)
+- **Fotos del usuario**: 15 imágenes reales de Los Capayanes (100% fotos reales, NO AI) ⭐ UPDATED
   1. Exterior de la cabaña de troncos
   2. Baño privado con ducha
   3. Entrada de la Reserva Los Capayanes
   4. Actividades en motos por la montaña
   5. Cartel de Las Palmas
   6. Campo verde con naturaleza
+  7. Visitantes en el campo
+  8. Momento de relax
+  9. Asado y camping
+  10. Trekking guiado
+  11. Vista panorámica montañas
+  12. Interior cabaña con hogar a leña ⭐ NEW
+  13. Horno de barro tradicional ⭐ NEW
+  14. Taller de artesanías ⭐ NEW
+  15. Creación de artesanías ⭐ NEW
 - **Texto completo**: Descripción, servicios, actividades, precios
-- **Contacto**: Teléfono, dirección, WhatsApp, mapa
-- **Testimonios**: 6 reseñas realistas de visitantes ⭐ NEW
+- **Contacto**: Teléfono (+5493834050043), dirección, WhatsApp, email (fdiazamarfil@gmail.com), mapa
+- **Testimonios**: 6 reseñas realistas de visitantes
+- **Backend**: API funcional con MongoDB ⭐ NEW
 
-## Features NOT Yet Implemented (Backend Phase)
-- [ ] Backend API con FastAPI
-- [ ] Database MongoDB para almacenar consultas
-- [ ] Email notifications cuando llega consulta
-- [ ] Admin panel para gestionar reservas
-- [ ] Sistema de disponibilidad/calendario
-- [ ] Galería dinámica (upload de fotos)
+## Features NOT Yet Implemented (Future Enhancements)
+- [ ] Email notifications automáticas cuando llega consulta (email configurado: fdiazamarfil@gmail.com)
+- [ ] Admin panel web para gestionar consultas visualmente
+- [ ] Sistema de disponibilidad/calendario de reservas
+- [ ] Galería dinámica (upload de fotos desde admin)
 - [ ] Blog de experiencias
-- [ ] Testimonios de visitantes
 - [ ] Multi-idioma (inglés)
+- [ ] Sistema de pagos online (opcional)
 
 ## Next Action Items (Priority Order)
 
@@ -179,11 +207,12 @@ Construir una página web para promocionar el alquiler de una cabaña anexo camp
 - El map usa iframe de Google Maps
 
 ## Deployment Status
-- ✅ Frontend: Running on localhost:3000
-- ⏳ Backend: Not yet implemented
-- ⏳ Database: MongoDB ready but not connected
+- ✅ Frontend: Running on localhost:3000 and preview URL
+- ✅ Backend: Running on 0.0.0.0:8001 (mapped externally) ⭐ NEW
+- ✅ Database: MongoDB connected and storing contacts ⭐ NEW
+- ✅ API Documentation: Available at /docs and /redoc ⭐ NEW
 
 ---
 
-**Last Updated**: December 18, 2026 - 15:52 HS
-**Status**: Frontend MVP Complete ✅ | Testimonials Added ⭐ | Real Photos Only 📸
+**Last Updated**: December 18, 2026 - 21:10 HS
+**Status**: Full-Stack MVP Complete ✅ | Backend Integrated 🚀 | 15 Photos | Contact Form → MongoDB
