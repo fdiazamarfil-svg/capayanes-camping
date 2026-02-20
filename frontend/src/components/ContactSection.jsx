@@ -27,8 +27,8 @@ export const ContactSection = () => {
     setIsSubmitting(true);
 
     try {
-      // SIEMPRE usar localhost:8001 para desarrollo
-      const API_URL = 'http://localhost:8001';
+      // Usar variable de entorno o fallback a localhost
+      const API_URL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:8001';
       
       console.log('=== ENVIANDO FORMULARIO ===');
       console.log('URL:', `${API_URL}/api/contact/`);
