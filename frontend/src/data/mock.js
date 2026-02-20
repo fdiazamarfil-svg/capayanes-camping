@@ -148,6 +148,36 @@ export const gallery = [
     url: "https://customer-assets.emergentagent.com/job_capayanes-camping/artifacts/x6xmnb07_Screenshot_2026-02-18-11-27-31-702_com.google.android.apps.maps.jpg",
     alt: "Naturaleza y campo verde",
     category: "naturaleza"
+  },
+  {
+    id: 7,
+    url: "https://customer-assets.emergentagent.com/job_capayanes-camping/artifacts/bl1biyp3_WhatsApp%20Image%202026-02-16%20at%2020.18.06.jpeg",
+    alt: "Visitantes disfrutando del campo verde",
+    category: "visitantes"
+  },
+  {
+    id: 8,
+    url: "https://customer-assets.emergentagent.com/job_capayanes-camping/artifacts/1kzksile_WhatsApp%20Image%202026-02-16%20at%2020.18.07.jpeg",
+    alt: "Momento de relax en el camping",
+    category: "visitantes"
+  },
+  {
+    id: 9,
+    url: "https://customer-assets.emergentagent.com/job_capayanes-camping/artifacts/s4w79y0q_WhatsApp%20Image%202026-02-17%20at%2021.18.02.jpeg",
+    alt: "Asado y actividades en el camping",
+    category: "actividades"
+  },
+  {
+    id: 10,
+    url: "https://customer-assets.emergentagent.com/job_capayanes-camping/artifacts/2j68vbhy_WhatsApp%20Image%202026-02-17%20at%2021.18.09.jpeg",
+    alt: "Trekking guiado con vistas panorámicas",
+    category: "actividades"
+  },
+  {
+    id: 11,
+    url: "https://customer-assets.emergentagent.com/job_capayanes-camping/artifacts/9is2cs8o_WhatsApp%20Image%202026-02-17%20at%2021.18.11.jpeg",
+    alt: "Vista panorámica de las montañas de Los Capayanes",
+    category: "naturaleza"
   }
 ];
 

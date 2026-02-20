@@ -11,6 +11,7 @@ export const GallerySection = () => {
     { id: 'cabaña', label: 'Cabaña' },
     { id: 'naturaleza', label: 'Naturaleza' },
     { id: 'actividades', label: 'Actividades' },
+    { id: 'visitantes', label: 'Visitantes' },
     { id: 'reserva', label: 'Reserva' }
   ];
 
