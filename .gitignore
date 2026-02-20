@@ -82,5 +82,6 @@ frontend/node_modules/.cache/default-development/2.pack
 frontend/node_modules/.cache/default-development/3.pack
 -e 
 # Environment files
-*.env
-*.env.*
+# Environment variables - Keep for Emergent deployment
+# The platform will auto-update these with production values
+# Do NOT add .env files to gitignore for Emergent deployment
