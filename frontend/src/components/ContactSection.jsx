@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
-import { Send, User, Mail, Phone, MessageSquare, CheckCircle } from 'lucide-react';
+import { Send, User, Mail, Phone, MessageSquare, CheckCircle, AlertCircle } from 'lucide-react';
 import { contact } from '../data/mock';
 import { toast } from 'sonner';
+import axios from 'axios';
+
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 
 export const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -21,22 +24,30 @@ export const ContactSection = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Mock submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-      toast.success('¡Mensaje enviado con éxito! Te contactaremos pronto.');
+    try {
+      // Enviar datos al backend
+      const response = await axios.post(`${BACKEND_URL}/api/contact/`, formData);
       
-      // Reset form after 3 seconds
-      setTimeout(() => {
-        setFormData({ name: '', email: '', phone: '', message: '', service: 'cabaña' });
-        setIsSubmitted(false);
-      }, 3000);
-    }, 1500);
+      if (response.status === 201) {
+        setIsSubmitted(true);
+        toast.success('¡Mensaje enviado con éxito! Te contactaremos pronto.');
+        
+        // Reset form after 3 seconds
+        setTimeout(() => {
+          setFormData({ name: '', email: '', phone: '', message: '', service: 'cabaña' });
+          setIsSubmitted(false);
+        }, 3000);
+      }
+    } catch (error) {
+      console.error('Error al enviar consulta:', error);
+      toast.error('Error al enviar el mensaje. Por favor, intenta de nuevo o contacta por WhatsApp.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const openWhatsApp = () => {
