@@ -65,6 +65,28 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/a
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
+#### Deploying to Netlify
+
+This project is configured for easy deployment to Netlify. The repository includes:
+
+- `netlify.toml` configuration file in the root directory
+- `_redirects` file in the frontend directory for React Router support
+
+**Steps to deploy:**
+
+1. Connect your GitHub repository to Netlify
+2. Netlify will automatically detect the `netlify.toml` configuration
+3. Set the following environment variable in Netlify dashboard:
+   - `REACT_APP_BACKEND_URL`: URL of your backend API (e.g., `https://your-api.com`)
+4. Deploy! Netlify will:
+   - Install dependencies with `npm install --legacy-peer-deps`
+   - Build the React app with `npm run build`
+   - Deploy the production build
+
+The `netlify.toml` file is already configured with the correct build settings and redirects for React Router.
+
+**Note:** If your backend API is deployed separately, make sure to configure CORS to allow requests from your Netlify domain.
+
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

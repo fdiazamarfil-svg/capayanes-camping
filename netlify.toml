@@ -1,0 +1,21 @@
+[build]
+  # Directory where the React app is located
+  base = "frontend/"
+  
+  # Build command to create production build
+  # Using --legacy-peer-deps to resolve dependency conflicts
+  command = "npm install --legacy-peer-deps && npm run build && cp _redirects build/_redirects"
+  
+  # Directory where the build output is generated
+  publish = "build/"
+
+# Redirect rules for React Router
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Environment variables (can be overridden in Netlify UI)
+[build.environment]
+  # NODE_VERSION is used by Netlify to determine which Node.js version to use
+  NODE_VERSION = "18"
