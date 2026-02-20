@@ -5,6 +5,10 @@ import { toast } from 'sonner';
 import axios from 'axios';
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+const LOCAL_BACKEND = 'http://localhost:8001';
+
+// Detectar si estamos en localhost
+const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
 
 export const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -29,8 +33,17 @@ export const ContactSection = () => {
     setIsSubmitting(true);
 
     try {
-      // Enviar datos al backend
-      const response = await axios.post(`${BACKEND_URL}/api/contact/`, formData);
+      // Usar backend local en desarrollo
+      const apiUrl = isLocalhost ? LOCAL_BACKEND : BACKEND_URL;
+      
+      console.log('Enviando a:', `${apiUrl}/api/contact/`);
+      
+      const response = await axios.post(`${apiUrl}/api/contact/`, formData, {
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        timeout: 10000 // 10 segundos timeout
+      });
       
       if (response.status === 201) {
         setIsSubmitted(true);
@@ -44,7 +57,18 @@ export const ContactSection = () => {
       }
     } catch (error) {
       console.error('Error al enviar consulta:', error);
-      toast.error('Error al enviar el mensaje. Por favor, intenta de nuevo o contacta por WhatsApp.');
+      console.error('Error details:', error.response?.data);
+      
+      // Mostrar mensaje más específico
+      if (error.code === 'ECONNABORTED') {
+        toast.error('Tiempo de espera agotado. Por favor, intenta de nuevo.');
+      } else if (error.response) {
+        toast.error(`Error del servidor: ${error.response.status}. Por favor, contacta por WhatsApp.`);
+      } else if (error.request) {
+        toast.error('No se pudo conectar con el servidor. Por favor, contacta por WhatsApp.');
+      } else {
+        toast.error('Error al enviar el mensaje. Por favor, intenta de nuevo o contacta por WhatsApp.');
+      }
     } finally {
       setIsSubmitting(false);
     }
