@@ -105,6 +105,7 @@ export const contact = {
   city: "San Fernando del Valle de Catamarca",
   phone: "+5493834050043",
   whatsapp: "+5493834050043",
+  email: "fdiazamarfil@gmail.com",
   mapUrl: "https://maps.app.goo.gl/hrb6TPGDswDv9stH6",
   coordinates: {
     lat: -28.3447,
